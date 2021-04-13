@@ -12,4 +12,13 @@
     <string name="confirm_password">Confirmar contraseña</string>
     <string name="sign_in">Ya tenes cuenta? Inicia sesion</string>
     <string name="email1">Correo electronico</string>
+    <string name="android">Android</string>
+    <string name="ios">iOS</string>
+    <string name="que_plataforma_usas">Que plataforma usas?</string>
+    <string name="programaci_n">Programación</string>
+    <string name="redes">Redes</string>
+    <string name="seguridad">Seguridad</string>
+    <string name="hardware">Hardware</string>
+    <string name="otra">Otra</string>
+    <string name="cuales_son_tus_preferencias">Cuales son tus preferencias?</string>
 </resources>

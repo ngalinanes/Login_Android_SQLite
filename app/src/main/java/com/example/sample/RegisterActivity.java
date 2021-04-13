@@ -37,12 +37,12 @@ public class RegisterActivity extends AppCompatActivity {
                 String repass = Repassword.getText().toString();
                 String correo = Email.getText().toString();
 
-                if(user.equals("")|| password.equals("")||repass.equals("")||correo.equals(""))
-                    Toast.makeText(RegisterActivity.this,"Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show();
-                else {
-                    if (password.length() < 6 || repass.length() < 6)
+                if(user.equals("")|| password.equals("")||repass.equals("")||correo.equals("")) {
+                    Toast.makeText(RegisterActivity.this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (password.length() < 6 || repass.length() < 6) {
                         Toast.makeText(RegisterActivity.this, "La contraseña debe tener mas de 6 caracteres.", Toast.LENGTH_SHORT).show();
-                    else {
+                    } else {
                         if (password.equals(repass)) {
                             Boolean checkuser = DB.checkusername(user);
                             if (!checkuser) {

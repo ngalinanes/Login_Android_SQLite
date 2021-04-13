@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
@@ -9,8 +10,9 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="326dp"
-        android:layout_height="267dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/image"
         android:src="@drawable/image" />
@@ -21,10 +23,85 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/image"
-        android:layout_marginTop="87dp"
         android:text="@string/Bienvenido"
         android:textColor="#0d6e6a"
         android:textSize="45sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginStart="@android:dimen/app_icon_size" />
+
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_marginTop="10dp"
+        android:text="@string/que_plataforma_usas"
+        android:textColor="#0d6e6a"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/question1"
+        android:id="@+id/plataforma">
+
+        <RadioButton
+            android:id="@+id/radio_pirates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ios" />
+
+        <RadioButton
+            android:id="@+id/radio_ninjas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/android" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/plataforma"
+        android:layout_marginTop="10dp"
+        android:textColor="#0d6e6a"
+        android:text="@string/cuales_son_tus_preferencias"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <CheckBox android:id="@+id/checkbox_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/programaci_n"
+        android:layout_below="@id/question2"/>
+    <CheckBox android:id="@+id/checkbox_redes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/redes"
+        android:layout_below="@id/checkbox_prog"/>
+    <CheckBox android:id="@+id/checkbox_seg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seguridad"
+        android:layout_below="@id/checkbox_redes"/>
+    <CheckBox android:id="@+id/checkbox_hard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hardware"
+        android:layout_below="@id/checkbox_seg"/>
+    <CheckBox android:id="@+id/checkbox_otra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/otra"
+        android:layout_below="@id/checkbox_hard"/>
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/checkbox_otra"
+        android:inputType="text"
+        android:hint="Cual otra?" />
 
 </RelativeLayout>
